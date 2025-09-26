@@ -71,7 +71,7 @@ legend {font-weight: bold;}
     margin: 20px auto;
     width: auto;
     display:grid;
-    overflow: hidden;
+    overflow:hidden;
     }
 
 .box-left p, .box-right p {padding-top: 15px;
@@ -117,7 +117,9 @@ header, nav, main, footer, aside, figure { display: block; }
  textarea {width: 60%;}
  main table {width: 70%;}
  body { background-color: #3c3646;}
+.box-left img, .box-left video, .box-right img, .box-right video {
 
+}
  }
  
 /* Large Display */
@@ -134,11 +136,15 @@ header, nav, main, footer, aside, figure { display: block; }
   main {width: 80%;}
   main table {width: 70%;}
   body { background-color: #3c3646;}
-  .box-left img, video {
+  .box-left img, .box-left video {
     float: left;
+    width: 55%;
+    height: auto;
 }
-.box-right img, video {
+.box-right img, .box-right video {
     float: right;
+    width: 55%;
+    height: auto;
 }
 .box-left span, .box-right span {position:relative; top: 10px;}
 .box-left p, .box-right p {font-size: 13px;}
