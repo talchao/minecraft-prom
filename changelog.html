@@ -7,11 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="styles.css">
   <style>
-    main img {width: 200px; height: 200px;}
-    main img:hover {scale: 100%; padding: 0.75em;}
-    @media (min-width: 600px) {
-      main img {height: 240px;}
-      main video {height: 240px;}
+    @media (max-width: 599px) {
+        .logo{width: 300px}
     }
     .new {color: red;}
     code {
@@ -29,7 +26,7 @@
 <body>
 <div id="wrapper">
   <header>
-    <a href="index.html"><img src="images/minecraft_title.png" alt="Minecraft Prom logo" width="400"></a>
+    <a href="index.html"><img src="images/minecraft_title.png" alt="Minecraft Prom logo" width="400" class="logo"></a>
   </header>
     <nav>
 	<ul>
