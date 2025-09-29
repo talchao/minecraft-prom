@@ -67,7 +67,7 @@
     fieldset {width: 75%;}
 
     legend {font-weight: bold;}
-    .latest-box {
+    .latest-box, .box {
         background-color: #a65ec2;
         color: white;
         border-radius: 10px;
@@ -77,7 +77,11 @@
         display:grid;
         overflow:hidden;
     }
-    .latest-box img {
+    .box {
+        background-color: #d9a8f4;
+    }
+
+    .latest-box img, .box img {
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -85,6 +89,10 @@
         border-radius: 25px;
         }
     .latest-box h2, .latest-box h3, .latest-box h4 {
+        color: white; text-shadow: 
+        2px 2px 2px #231c28;
+    }
+    .box h2, .box h3, .box h4 {
         color: white; text-shadow: 
         2px 2px 2px #231c28;
     }
