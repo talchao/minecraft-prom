@@ -1,94 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>Minecraft Prom - Form</title>
-<meta charset="utf-8">
-<meta name="author" content="talchao"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<style>
-  h1 {padding-top: .5em; 
-      padding-bottom: .5em;}
-  main img {padding: 0;
-      padding-bottom: .5em;
-      width: 100%;}
-  .req {color: red;}
-</style>
-</head>
-<body>
-<div id="wrapper">
-  <header>
-    <a href="index.html"><img src="images/minecraft_title.png" alt="Minecraft Prom logo" width="300"></a>
-  </header>
-    <nav>
-      <ul>
+  <head>
+    <title>Minecraft Prom - Form</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="talchao" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      h1 {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      main img {
+        padding: 0;
+        padding-bottom: 0.5em;
+        width: 100%;
+      }
+      .req {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <a href="index.html"
+          ><img
+            src="images/minecraft_title.png"
+            alt="Minecraft Prom logo"
+            width="300"
+        /></a>
+      </header>
+      <nav>
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="archive.html">Archive</a></li>
           <li><a href="changelog.html">Changelog</a></li>
           <!-- <li><a href="signup.html" id="page">Sign Up!</a></li> -->
           <!-- <li><a href="https://youtu.be/_7L17uV7DUs">Trailer</a> -->
-      </ul>
-    </nav>    
-  <main>
-    <h1>Minecraft Prom Form</h1>   
-    <p><a href="#bottom">Scroll to Bottom</a></p><br>
-    <img src="images/school.jpeg" alt="Front view of Minecraft MHS" width="600"> 
-    <form method="post">
-      <h4>First Name:<span class="req">*</span></h4>
-        <input type="text" name="firstName" id="firstName" required>
-      <h4>Last Name:<span class="req">*</span></h4>
-        <input type="text" name="lastName" id="lastName" required>
-      <h4>Minecraft Username:<span class="req">*</span></h4>
-        <input type="text" name="minecraftName" id="minecraftName" minlength="3" maxlength="16" required>
-      <h4>Discord Username:<span class="req">*</span></h4>
-        <input type="text" name="discordName" id="discordName" minlength="2" maxlength="32" required>
-      <h4>E-mail:</h4>
-        <input type="text" name="email" id="email">
-      <br><br>
-      <fieldset>
-          <legend >Favorite Game(s)?</legend>
-          <input type="checkbox" name="Favorite" id="favSpleef"> Spleef <br>
-          <input type="checkbox" name="Favorite" id="favC4"> Connnect 4 <br>
-          <input type="checkbox" name="Favorite" id="favTTT"> Tic-Tac-Toe <br>
-          <input type="checkbox" name="Favorite" id="favDodgeball"> Dodgeball <br>
-      </fieldset><br>
-      <fieldset>
-          <legend>What do you primarily play Minecraft on?</legend>
-          <input type="radio" name="gamingConsole" id="pc"> PC <br>
-          <input type="radio" name="gamingConsole" id="switch"> Nintendo Switch <br>
-          <input type="radio" name="gamingConsole" id="xbox"> Xbox <br>
-          <input type="radio" name="gamingConsole" id="ps"> PlayStation <br>
-          <input type="radio" name="gamingConsole" id="mobile"> Mobile <br>
-      </fieldset><br>
-      <h4>Select a day you are available</h4>
-        <select size="3">
+        </ul>
+      </nav>
+      <main>
+        <h1>Minecraft Prom Form</h1>
+        <p><a href="#bottom">Scroll to Bottom</a></p>
+        <br />
+        <img
+          src="images/school.jpeg"
+          alt="Front view of Minecraft MHS"
+          width="600"
+        />
+        <form method="post">
+          <h4>First Name:<span class="req">*</span></h4>
+          <input type="text" name="firstName" id="firstName" required />
+          <h4>Last Name:<span class="req">*</span></h4>
+          <input type="text" name="lastName" id="lastName" required />
+          <h4>Minecraft Username:<span class="req">*</span></h4>
+          <input
+            type="text"
+            name="minecraftName"
+            id="minecraftName"
+            minlength="3"
+            maxlength="16"
+            required
+          />
+          <h4>Discord Username:<span class="req">*</span></h4>
+          <input
+            type="text"
+            name="discordName"
+            id="discordName"
+            minlength="2"
+            maxlength="32"
+            required
+          />
+          <h4>E-mail:</h4>
+          <input type="text" name="email" id="email" />
+          <br /><br />
+          <fieldset>
+            <legend>Favorite Game(s)?</legend>
+            <input type="checkbox" name="Favorite" id="favSpleef" /> Spleef
+            <br />
+            <input type="checkbox" name="Favorite" id="favC4" /> Connnect 4
+            <br />
+            <input type="checkbox" name="Favorite" id="favTTT" /> Tic-Tac-Toe
+            <br />
+            <input type="checkbox" name="Favorite" id="favDodgeball" />
+            Dodgeball <br />
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>What do you primarily play Minecraft on?</legend>
+            <input type="radio" name="gamingConsole" id="pc" /> PC <br />
+            <input type="radio" name="gamingConsole" id="switch" /> Nintendo
+            Switch <br />
+            <input type="radio" name="gamingConsole" id="xbox" /> Xbox <br />
+            <input type="radio" name="gamingConsole" id="ps" /> PlayStation
+            <br />
+            <input type="radio" name="gamingConsole" id="mobile" /> Mobile
+            <br />
+          </fieldset>
+          <br />
+          <h4>Select a day you are available</h4>
+          <select size="3">
             <option>Sat. Oct 18th @ 7pm CST</option>
             <option>Sat. Oct 25th @ 7pm CST</option>
-            <option>Sat. Nov &nbsp; 1rd  @ 7pm CST</option>
+            <option>Sat. Nov &nbsp; 1rd @ 7pm CST</option>
             <option>Anytime</option>
-        </select>
-      <br><br>
-      <h4>Suggestions for Minecraft Prom</h4>
-        <textarea name="suggestions" id="suggestions" cols="60" rows="10">This form does NOT work. Do not fill this out. <br> Please reach out to @talchao on Discord or Instagram with any inqueries.</textarea>
-      <br>
-      <a id="bottom"></a>
-      <input type="submit" value="Submit">
-      <input type="reset" value="Clear">
-      <br><br>
-    </form>
-</main>
-<footer>
-  &copy; <b>MHS Minecraft Prom 2021-2025</b> <br>
-  <i>Not affiliated with MHS, Minecraft, Mojang, or Microsoft</i><br>
-  <a href="https://www.instagram.com/talchao">Discord: talchao | Instagram: talchao</a>
-  </footer>
- </div>
-</body>
+          </select>
+          <br /><br />
+          <h4>Suggestions for Minecraft Prom</h4>
+          <textarea name="suggestions" id="suggestions" cols="60" rows="10">
+This form does NOT work. Do not fill this out. <br> Please reach out to @talchao on Discord or Instagram with any inqueries.</textarea
+          >
+          <br />
+          <a id="bottom"></a>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Clear" />
+          <br /><br />
+        </form>
+      </main>
+      <footer>
+        &copy; <b>MHS Minecraft Prom 2021-2025</b> <br />
+        <i>Not affiliated with MHS, Minecraft, Mojang, or Microsoft</i><br />
+        <a href="https://www.instagram.com/talchao"
+          >Discord: talchao | Instagram: talchao</a
+        >
+      </footer>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
