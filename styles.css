@@ -95,7 +95,7 @@ legend {font-weight: bold;}
     text-shadow: 2px 2px 2px #231c28;
     padding-bottom: 1em;
 }
-.latest-box ul, .box ul { padding-bottom: 1em; }
+.box-content {padding-bottom: 1em;}
 .box h2, .box h3, .box h4 {
     color: white; 
     text-shadow: 2px 2px 2px #231c28;
