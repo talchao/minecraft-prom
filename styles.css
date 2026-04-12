@@ -71,6 +71,10 @@ nav #page { font-weight: bold;
             color: #ffffff; 
             text-shadow: 2px 2px #2c272f;}
 
+ul ul {
+    padding-left: 15px;
+}
+
 footer a:hover { color: #eedff3; }
 
 input[type=text] {width: 75%;}
@@ -120,7 +124,7 @@ legend {font-weight: bold;}
 }
 
 .latest-box a {
-    color:#00005D
+    color:#281aee
 }
 
 .box-left, .box-right {
