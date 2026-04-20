@@ -55,26 +55,18 @@
           <div class="box-content">
             <h3>5 Years of Prom!</h3>
             <ul>
-              <li>Added birthday cake – click to grab a slice</li>
-              <li>Updated Tic-Tac-Toe:</li>
-              <ul>
-                <li>Endless mode</li>
-                <li>Custom blocks</li>
-              </ul>
+              <li>Added birthday cake</li>
+              
               <li>Added warp compass</li>
               <ul>
                 <li>Fast travel between frequented locations (spawn, games, casino, lake)</li>
-                <li>Alternatively, use <code>!warp &lt;location:optional&gt;</code></li>
-              </ul>
-              <li>Added <code>!back</code> – teleports player to last recorded location</li>
-              <ul>
-                <li><b>Note:</b> Location is currently only recorded after using a custom teleport command (e.g. <code>!spawn</code>)</li>
+                <li>Alternatively, use <code>/warp &lt;location:optional&gt;</code></li>
               </ul>
               <li>Custom fish now properly stack in the inventory when caught</li>
               <li>Added Pochita plushie</li>
-                <ul>
-                  <li>Find any of the 3 Pochita plushies around the map for a diamond reward!</li>
-                </ul>
+              <ul>
+                <li>Find any of the 5 Pochita plushies around the map for a diamond reward!</li>
+              </ul>
               <li>Added in-game chat announcements</li>
               <li>Customized pause and load screens:</li>
               <ul>
@@ -82,45 +74,70 @@
                 <li>Added MHS panorama to load screen</li>
               </ul>
               <li>Added stop sign block</li>
-              <li>Added Meatball painting</li>
+              <li>Added Meatball & Ryan Gosling paintings</li>
               <li>Added speaking head emoji</li>
               <li>Improved BamBam Hammer bonk behavior</li>
               <li>Dunk tank now gives players snowballs (prev. dodgeballs)</li>
-              <li>GG emoji no longer automatically inserts into words (e.g. riGGed). GG emoji will now only appear if:</li>
-              <ol>
-                <li>GG is the only text in a message</li>
-                <li>GG is placed between colons (<code>:GG:</code>)</li>
-              </ol>
+              <li>GG emoji no longer automatically inserts into words containing consecutive G's (e.g. rigged).</li>
               <li>Signs displaying coordinates will teleport player to coordinates when punched</li>
               <li>Added Mrs. Whiteside NPC</li>
               <br>
             </ul>
-            <h3>Casino: <code>!casino</code></h3>
+            <h3>Commands</h3>
             <ul>
-              <li>Arcade machines can now be found in both the <code>!arcade</code> and <code>!casino</code> (prev. only arcade)</li>
-              <li>Lootbox adjustments:</li>
+              <li>Converted <code>!</code> -> <code>/</code> commands</li>
               <ul>
-                <li> (+) Dino Domo plushie</li>
-                <li> (–) Frankenstein hat</li>
-                <li> (–) Witch hat</li>
+                <li>Allows for tab completion</li>
+                <li>Aligns more with vanilla commands</li>
+                <li><b>Note:</b> <code>!</code> commands are still available for now, but will lose support in later events</li>
               </ul>
-              <li>Added chat notification when casino opens</li>
-              <li>Added additional casino entrance</li>
-              <br>
-            </ul>
-            <h3>Spleef:</h3>
-            <ul>
-              <li>Reworked user interface for spleef tips</li>
-              <li>Updated TP Stick:</li>
+              <li>Added <code>/sell</code> – quickly sell specific or all fish</li>
+              <li>Added <code>/back</code> – teleports player to last recorded location</li>
               <ul>
-                <li>Displays time remaining on cooldown when clicked</li>
-                <li>Recharge notification when cooldown is finished</li>
-              </ul>  
-              <li>Creeper plushie now breaks blocks (prev. only applied knockback)</li>
-              <li>Players no longer take fall damage</li>
-              <li>Improved detection when players exit spleef</li>
+                <li><b>Note:</b> Location is currently only recorded after using a custom teleport command (e.g. <code>/warp</code>)</li>
+              </ul>
               <br>
             </ul>
+            <H3>Dodgeball:</H3>
+            <ul>
+              <li>Lock/unlock player movement</li>
+              <li>Ready-up system</li>
+              <li>Countdown</li>
+              <li>Improve dodgeball pickup behavior</li>
+              <br>
+            </ul>
+            <h3>Tic-Tac-Toe: <code>/warp tic-tac-toe</code></h3>
+            <ul>
+              <li>Endless mode</li>
+              <li>Custom blocks</li>
+              <br>
+            </ul>
+            <h3>Spleef: <code>/warp spleef</code></h3> 
+              <ul>
+                <li>Reworked user interface for spleef tips</li>
+                <li>Updated TP Stick:</li>
+                <ul>
+                  <li>Displays time remaining on cooldown when clicked</li>
+                  <li>Recharge notification when cooldown is finished</li>
+                </ul>  
+                <li>Creeper plushie now breaks blocks (prev. only applied knockback)</li>
+                <li>Players no longer take fall damage</li>
+                <li>Improved detection when players exit spleef</li>
+                <br>
+              </ul>
+              <h3>Casino: <code>/warp casino</code></h3>
+              <ul>
+                <li>Arcade machines can now be found in both the arcade and casino (prev. only arcade)</li>
+                <li>Lootbox adjustments:</li>
+                <ul>
+                  <li> (+) Dino Domo plushie</li>
+                  <li> (–) Frankenstein hat</li>
+                  <li> (–) Witch hat</li>
+                </ul>
+                <li>Added notification when casino opens</li>
+                <li>Added additional casino entrance</li>
+                <br>
+              </ul>
             <h3>Discord:</h3>
             <ul>
               <li>Added <a href="https://talchao.github.io/assocify">Assocify</a> bot</li>
@@ -393,11 +410,9 @@
       </main>
 
       <footer>
-        &copy; <b>MHS Minecraft Prom 2021-2025</b> <br>
+        &copy; <b>MHS Minecraft Prom 2021-2026</b> <br>
         <i>Not affiliated with MHS, Minecraft, Mojang, or Microsoft</i><br>
-        <a href="https://www.instagram.com/talchao"
-          >Discord: talchao | Instagram: talchao</a
-        >
+        <p>Created by <a href="https://www.github.com/talchao">talchao</a></p>
       </footer>
     </div>
   </body>
