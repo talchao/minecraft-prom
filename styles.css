@@ -28,6 +28,8 @@ main {   background-color: #FFFFFF;
 
 img { padding: 1em;}
 
+iframe { max-width: 100vw; width: 100%;}
+
 video {
     padding: 1em;
     padding-top: 20px;
