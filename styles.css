@@ -77,9 +77,11 @@ nav a:link { color: #00005D; }
 
 nav a:hover { color: #ffffff; }
 
-nav #page { font-weight: bold;
-            color: #ffffff; 
-            text-shadow: 2px 2px #2c272f;}
+nav #page { 
+    font-weight: bold;
+    color: #ffffff; 
+    text-shadow: 2px 2px #2c272f;
+}
 
 ul ul {
     padding-left: 15px;
@@ -96,8 +98,8 @@ fieldset {width: 75%;}
 
 legend {font-weight: bold;}
 
-.latest-box, .box {
-    background-color: #a65ec2;
+.box {
+    background-color: #d9a8f4;
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -107,8 +109,8 @@ legend {font-weight: bold;}
     overflow:hidden;
 }
 
-.box {
-    background-color: #d9a8f4;
+.box:first-of-type {
+    background-color: #a65ec2;
 }
 
 .latest-box img, .box img {
