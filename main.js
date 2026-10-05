@@ -4,7 +4,7 @@ const nav = document.createElement("nav")
 const year = new Date().getFullYear()
 
 footer.innerHTML = `
-    <p>&#169; <b>Minecraft Prom ${year}</b></p>
+    <p>&copy; <b>Minecraft Prom ${year}</b></p>
     <p><i>Not affiliated with MHS, Minecraft, Mojang, or Microsoft</i></p>
     <p>Created by <a href="https://www.github.com/talchao">talchao</a></p>
 `
