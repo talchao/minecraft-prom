@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com");
+
+.material-symbols-outlined {
+  vertical-align: middle;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.text-shadow-1 { text-shadow: 0px 2px 5px #2d2a2f; }
+
+nav {
+  height: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+.card-img-uniform {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Or 4/3, 1/1 for squares, etc. */
+    object-fit: cover;    /* Crops the image to fill the space without distortion */
+}

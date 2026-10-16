@@ -1,398 +1,443 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <title>Minecraft Prom - Changelog</title>
     <meta charset="utf-8" />
     <meta name="author" content="talchao" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new"/>
-    <style>
-      .new {
-        color: red;
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=open_in_new,dark_mode,light_mode" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script>
+      // Check localStorage or system settings immediately before page rendering
+      const savedTheme = localStorage.getItem("theme");
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-bs-theme", "light");
       }
-      code {
-        font-family: Consolas, "courier new";
-        color: rgb(238, 114, 138);
-        background-color: #483555;
-        padding: 1.25px;
-        padding-bottom: 0.75px;
-        font-weight: bold;
-        border-radius: 5px;
-      }
-      .box {
-        width: auto;
-      }
-      h1 {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-      }
-      .box-content > ul, h4 {
-          padding-bottom: 12px;
-      }
-    </style>
+    </script>
   </head>
+
   <body>
     <div id="wrapper">
-      <header>
-        <a href="index.html"
-          ><img
-            src="images/minecraft_title.png"
-            alt="Minecraft Prom logo"
-            width="300"
-        /></a>
-      </header>
-      <main>
-        <h1>Changelog</h1>
-        <p>Latest event:</p>
-        <div class="box" id="prom26">
-          <h2>Minecraft Prom 2026</h2>
-          <h4><time>April 25, 2026</time></h4>
-          <div class="box-content">
-            <h3>5 Years of Prom!</h3>
-            <ul>
-              <li>Added birthday cake</li>
-              
-              <li>Added warp compass</li>
-              <ul>
-                <li>Fast travel between frequented locations (spawn, games, casino, lake)</li>
-                <li>Alternatively, use <code>/warp &lt;location&gt;</code></li>
-              </ul>
-              <li>Custom fish now properly stack in the inventory when caught</li>
-              <li>Added Pochita plushie</li>
-              <ul>
-                <li>Find any of the 5 Pochita plushies around the map for a diamond reward!</li>
-              </ul>
-              <li>Added in-game chat announcements</li>
-              <li>Customized pause and load screens:</li>
-              <ul>
-                <li>Added logo to pause and load screens</li>
-                <li>Added MHS panorama to load screen</li>
-              </ul>
-              <li>Added stop sign block</li>
-              <li>Added Meatball, Ryan Gosling, and "I'm nothing like y'all" paintings</li>
-              <li>Added speaking head emoji</li>
-              <li>Dunk tank now gives players snowballs (prev. dodgeballs)</li>
-              <li>GG emoji no longer automatically inserts into words containing consecutive G's (e.g. rigged)</li>
-              <li>Signs displaying coordinates will teleport player to coordinates when punched</li>
-              <li>Added Mrs. Whiteside NPC</li>
-            </ul>
-            <h3>Commands</h3>
-            <ul>
-              <li>Converted <code>!</code> -> <code>/</code> commands</li>
-              <ul>
-                <li>Allows for tab completion</li>
-                <li>Aligns more with vanilla commands</li>
-                <li><b>Note:</b> <code>!</code> commands are still available for now, but will lose support in later events</li>
-              </ul>
-              <li>Added <code>/sell</code> – quickly sell specific or all fish</li>
-              <li>Added <code>/back</code> – teleports player to last recorded location</li>
-              <ul>
-                <li><b>Note:</b> Location is currently only recorded after using a custom teleport command (e.g. <code>/warp</code>)</li>
-              </ul>
-            </ul>
-            <h3>Dodgeball:</h3>
-            <ul>
-              <li>Lock/unlock player movement</li>
-              <li>Ready-up system</li>
-              <li>Countdown</li>
-              <li>Improve dodgeball pickup behavior</li>
-            </ul>
-            <h3>Tic-Tac-Toe: <code>/warp tic-tac-toe</code></h3>
-            <ul>
-              <li>Endless mode</li>
-              <li>Custom blocks</li>
-            </ul>
-            <h3>Spleef: <code>/warp spleef</code></h3> 
-              <ul>
-                <li>Reworked user interface for spleef tips</li>
-                <li>Updated TP Stick:</li>
+      <header></header>
+      <main class="bg-primary">
+        <div class="container pt-3 pb-3">
+          <h1 class="text-black">Changelog</h1>
+          <div class="container p-3 mt-3 rounded bg-body" id="hoco26">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#hoco26-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Homecoming 2026</h3>
+                  <p class="text-body-50"><time>October 24, 2026</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="hoco26-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2026_hoco.png" alt="" />
+                <h3>5 Years of Hoco</h3>
                 <ul>
-                  <li>Displays time remaining on cooldown when clicked</li>
-                  <li>Recharge notification when cooldown is finished</li>
-                </ul>  
-                <li>Creeper plushie now breaks blocks (prev. only applied knockback)</li>
-                <li>Players no longer take fall damage</li>
-                <li>Improved detection when players exit spleef</li>
-              </ul>
-              <h3>Casino: <code>/warp casino</code></h3>
-              <ul>
-                <li>Arcade machines can now be found in both the arcade and casino (prev. only arcade)</li>
-                <li>Lootbox adjustments:</li>
-                <ul>
-                  <li> (+) Dino Domo plushie</li>
-                  <li> (–) Frankenstein hat</li>
-                  <li> (–) Witch hat</li>
+                  <li>Added candy collectables around the map. Exchange them for goodies with the candy merchant.</li>
+                  <ul>
+                    <li>Moved Frankenstein and witch hat from loot box to candy merchant.</li>
+                    <li>Added braided brain hat.</li>
+                    <li>Added broom mount.</li>
+                  </ul>
+                  <li>Added a new Halloween fish.</li>
+                  <li>Updated fisherman model.</li>
                 </ul>
-                <li>Added notification when casino opens</li>
-                <li>Added additional casino entrance</li>
-              </ul>
-            <h3>Discord:</h3>
-            <ul>
-              <li>Added <a href="https://talchao.github.io/assocify">Assocify</a> bot</li>
-              <li>Added <code>@Changelog</code> & <code>@Sneak Peaks</code> roles</li>
-              <li>Updated #FAQ appearance</li>
-              <li>Tweaked role colors</li>
-            </ul>
+                <h4>Connect 4</h4>
+                <ul>
+                  <li>Added a live Connect 4 display for a better spectating experience.</li>
+                  <li>Attempting to place a piece in a filled column will no longer skip your turn (input validation).</li>
+                </ul>
+                <h4>Spleef</h4>
+                <ul>
+                  <li>Knockback Nemo power-ups now stack properly in the inventory.</li>
+                </ul>
+                <h4>Loot Box</h4>
+                <ul>
+                  <li>Added propeller hat.</li>
+                  <li>Added rainbow lollipopt.</li>
+                  <li>Added gay little monkey plushie.</li>
+                  <li>Added Pochita plushie. (previously a scavenger hunt item)</li>
+                </ul>
+                <h4>PokéClaw</h4>
+                <ul>
+                  <li>Added the following plushies:</li>
+                  <ul>
+                    <li>Mew</li>
+                    <li>Mewtwo</li>
+                    <li>Mimikyu</li>
+                    <li>Mudkip</li>
+                    <li>Rowlet</li>
+                    <li></li>
+                  </ul>
+                </ul>
+                <h4>Misc.</h4>
+                <ul>
+                  <li>Removed support for <kbd>!</kbd> commands. (<kbd>/</kbd> commands only)</li>
+                  <li>Added carrotman texture.</li>
+                  <li>Added Scott Battas NPC.</li>
+                  <li>Added RSVP form to website (see <a href="./form.html">here</a>).</li>
+                  <li>Updated exit arrow model.</li>
+                  <li>Added item rarity and nametag icons.</li>
+                  <li>Added floating text displaying minigame info, previous court winners, credits, etc.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <img src="images/5th_anniversary.png" alt="Placeholder image" />
-        </div>
-        
-        <p>Past events:</p>
-        <div class="box" id="hoco25">
-          <h2>Minecraft Homecoming 2025</h2>
-          <h4><time>October 25, 2025</time></h4>
-          <div class="box-content">
-            <h3>Spleef:</h3>
-            <ul>
-              <li>Spleef arena makeover</li>
-              <li>
-                Added Power-Up cubes (grants player knockback nemo, creeper
-                plushie, or snowballs)
-              </li>
-              <li>Added infographics (click images on wall for quick tips)</li>
-              <li>Supports up to 8 players (previously 6)</li>
-              <li>Other various changes</li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="prom26">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#prom26-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Prom 2026</h3>
+                  <p class="text-body-50"><time>April 25, 2026</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="prom26-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2026_prom.png" alt="Placeholder image" />
+                <h2>5 Years of Prom!</h2>
+                <ul>
+                  <li>Added birthday cake</li>
+
+                  <li>Added warp compass</li>
+                  <ul>
+                    <li>Fast travel between frequented locations (spawn, games, casino, lake)</li>
+                    <li>Alternatively, use <kbd>/warp &lt;location&gt;</kbd></li>
+                  </ul>
+                  <li>Custom fish now properly stack in the inventory when caught</li>
+                  <li>Added Pochita plushie</li>
+                  <ul>
+                    <li>Find any of the 5 Pochita plushies around the map for a diamond reward!</li>
+                  </ul>
+                  <li>Added in-game chat announcements</li>
+                  <li>Customized pause and load screens:</li>
+                  <ul>
+                    <li>Added logo to pause and load screens</li>
+                    <li>Added MHS panorama to load screen</li>
+                  </ul>
+                  <li>Added stop sign block</li>
+                  <li>Added Meatball, Ryan Gosling, and "I'm nothing like y'all" paintings</li>
+                  <li>Added speaking head emoji</li>
+                  <li>Dunk tank now gives players snowballs (prev. dodgeballs)</li>
+                  <li>GG emoji no longer automatically inserts into words containing consecutive G's (e.g. rigged)</li>
+                  <li>Signs displaying coordinates will teleport player to coordinates when punched</li>
+                  <li>Added Mrs. Whiteside NPC</li>
+                </ul>
+                <h3>Commands</h3>
+                <ul>
+                  <li>Converted <kbd>!</kbd> -> <kbd>/</kbd> commands</li>
+                  <ul>
+                    <li>Allows for tab completion</li>
+                    <li>Aligns more with vanilla commands</li>
+                    <li><b>Note:</b> <kbd>!</kbd> commands are still available for now, but will lose support in later events</li>
+                  </ul>
+                  <li>Added <kbd>/sell</kbd> – quickly sell specific or all fish</li>
+                  <li>Added <kbd>/back</kbd> – teleports player to last recorded location</li>
+                  <ul>
+                    <li><b>Note:</b> Location is currently only recorded after using a custom teleport command (e.g. <kbd>/warp</kbd>)</li>
+                  </ul>
+                </ul>
+                <h3>Dodgeball:</h3>
+                <ul>
+                  <li>Lock/unlock player movement</li>
+                  <li>Ready-up system</li>
+                  <li>Countdown</li>
+                  <li>Improve dodgeball pickup behavior</li>
+                </ul>
+                <h3>Tic-Tac-Toe: <kbd>/warp tic-tac-toe</kbd></h3>
+                <ul>
+                  <li>Endless mode</li>
+                  <li>Custom blocks</li>
+                </ul>
+                <h3>Spleef: <kbd>/warp spleef</kbd></h3>
+                <ul>
+                  <li>Reworked user interface for spleef tips</li>
+                  <li>Updated TP Stick:</li>
+                  <ul>
+                    <li>Displays time remaining on cooldown when clicked</li>
+                    <li>Recharge notification when cooldown is finished</li>
+                  </ul>
+                  <li>Creeper plushie now breaks blocks (prev. only applied knockback)</li>
+                  <li>Players no longer take fall damage</li>
+                  <li>Improved detection when players exit spleef</li>
+                </ul>
+                <h3>Casino: <kbd>/warp casino</kbd></h3>
+                <ul>
+                  <li>Arcade machines can now be found in both the arcade and casino (prev. only arcade)</li>
+                  <li>Lootbox adjustments:</li>
+                  <ul>
+                    <li>(+) Dino Domo plushie</li>
+                    <li>(–) Frankenstein hat</li>
+                    <li>(–) Witch hat</li>
+                  </ul>
+                  <li>Added notification when casino opens</li>
+                  <li>Added additional casino entrance</li>
+                </ul>
+                <h3>Discord:</h3>
+                <ul>
+                  <li>
+                    Added
+                    <a href="https://talchao.github.io/assocify">Assocify</a>
+                    bot
+                  </li>
+                  <li>Added <kbd>@Changelog</kbd> & <kbd>@Sneak Peaks</kbd> roles</li>
+                  <li>Updated #FAQ appearance</li>
+                  <li>Tweaked role colors</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="box-content">
-            <h3>Loot Boxes: <code>!casino</code></h3>
-            <ul>
-              <li>
-                Added Halloween hats (witch & frankenstein) and Luxembourg flag
-                to Loot Boxes
-              </li>
-              <li>Removed college shirts & creeper plushies from Loot Boxes</li>
-              <ul>
-                <li>
-                  <strong>Note:</strong> College shirts can still be purchased
-                  from Mrs. Ward
-                </li>
-              </ul>
-              <li>
-                Loot boxes no longer teleport users with insufficient funds 1000
-                blocks in the air
-              </li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="hoco25">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#hoco25-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Homecoming 2025</h3>
+                  <p class="text-body-50"><time>October 25, 2025</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="hoco25-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2025_hoco.png" alt="Placeholder image" />
+                <h3>Spleef:</h3>
+                <ul>
+                  <li>Spleef arena makeover</li>
+                  <li>Added Power-Up cubes (grants player knockback nemo, creeper plushie, or snowballs)</li>
+                  <li>Added infographics (click images on wall for quick tips)</li>
+                  <li>Supports up to 8 players (previously 6)</li>
+                  <li>Other various changes</li>
+                </ul>
+                <h3>Loot Boxes: <kbd>!casino</kbd></h3>
+                <ul>
+                  <li>Added Halloween hats (witch & frankenstein) and Luxembourg flag to Loot Boxes</li>
+                  <li>Removed college shirts & creeper plushies from Loot Boxes</li>
+                  <ul>
+                    <li><strong>Note:</strong> College shirts can still be purchased from Mrs. Ward</li>
+                  </ul>
+                  <li>Loot boxes no longer teleport users with insufficient funds 1000 blocks in the air</li>
+                </ul>
+                <h3>Prices:</h3>
+                <ul>
+                  <li>Loot boxes now cost 1 diamond each to open (previously 2)</li>
+                  <li>College shirts from Mrs. Ward now cost 1 diamond each (previously 5)</li>
+                  <li>Pokemon plushies now cost 5 diamonds each (previously 10)</li>
+                  <li>ItemLabel plushies now cost 5 diamonds each (previously 20)</li>
+                </ul>
+                <h3>Plushies:</h3>
+                <ul>
+                  <li><strong>WE NEED TO SAVE DINO DOMO !!</strong></li>
+                  <ul>
+                    <li>Find any of the 3 dino domos around the map and receive a diamond prize!</li>
+                  </ul>
+                  <li>Most plushies no longer die traumatically when punched</li>
+                  <li>Aftonsparv plushie is now placeable</li>
+                  <li>Added outlines to Chiikawa and Hachiware plushies</li>
+                </ul>
+                <h3>Football Field: <kbd>!football</kbd></h3>
+                <ul>
+                  <li>Added Red Light, Green Light</li>
+                  <li>Added ClownPantss dunk tank</li>
+                  <li>Updated end zones to say "Mascoutah"</li>
+                </ul>
+                <h3>Misc:</h3>
+                <ul>
+                  <li>Updated Connect 4 lobby and added turns.</li>
+                  <li>Added beer leaderboard.</li>
+                  <li>Added two additional staff NPCs</li>
+                  <br />
+                  <li><kbd>!list</kbd> in-game for a list of all commands</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="box-content">
-            <h3>Prices:</h3>
-            <ul>
-              <li>Loot boxes now cost 1 diamond each to open (previously 2)</li>
-              <li>
-                College shirts from Mrs. Ward now cost 1 diamond each
-                (previously 5)
-              </li>
-              <li>Pokemon plushies now cost 5 diamonds each (previously 10)</li>
-              <li>
-                ItemLabel plushies now cost 5 diamonds each (previously 20)
-              </li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="prom25">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#prom25-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Prom 2025</h3>
+                  <p class="text-body-50"><time>April 26, 2025</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="prom25-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2025_prom.png" alt="" />
+                <h3>Casino: <kbd>!casino</kbd></h3>
+                <ul>
+                  <li><b class="new">!!</b> <b>NEW: Loot Boxes</b>: Spend 2 diamonds to get a fun, random item.</li>
+                  <li><b class="new">!!</b> <b>NEW: Slot Machine</b>: Bet an amount of diamonds (1, 5, or 10) for a chance to make a profit!</li>
+                  <li>Added more plushies, pride flags, & other collectables &mdash; available via loot boxes.</li>
+                  <li>Added Beer.</li>
+                </ul>
+                <h3>Games:</h3>
+                <ul>
+                  <li><b>Connect 4:</b> Added outlines to Connect 4 blocks for easier legibility.</li>
+                  <li><b>Dodgeball:</b> Replaced bow & arrow with a custom ball.</li>
+                  <ul>
+                    <li>No need to charge up the dodgeball like you would a bow &mdash; simply aim and right click to throw!</li>
+                  </ul>
+                </ul>
+                <h3>General:</h3>
+                <ul>
+                  <li>Added chairs.</li>
+                  <li>Players now receive an on-screen message upon joining the world.</li>
+                  <li>Court Jesters will now receive Clown Pants alongside the Court Jester Hat.</li>
+                  <li>Added more emojis (including rock, paper, & scissors).</li>
+                  <ul>
+                    <li><kbd>!emojis</kbd> in-game for a list of all emojis.</li>
+                  </ul>
+                  <li><kbd>!list</kbd> in-game for a list of all commands.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="box-content">
-            <h3>Plushies:</h3>
-            <ul>
-              <li><strong>WE NEED TO SAVE DINO DOMO !!</strong></li>
-              <ul>
-                <li>
-                  Find any of the 3 dino domos around the map and receive a
-                  diamond prize!
-                </li>
-              </ul>
-              <li>Most plushies no longer die traumatically when punched</li>
-              <li>Aftonsparv plushie is now placeable</li>
-              <li>Added outlines to Chiikawa and Hachiware plushies</li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="hoco24">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#hoco24-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Homecoming 2024</h3>
+                  <p class="text-body-50"><time>October 26, 2024</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="hoco24-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2024_hoco.png" alt="" />
+                <h3>General:</h3>
+                <ul>
+                  <li><b class="new">!!</b> <b>NEW: Chat Emojis</b> &mdash; <kbd>!emojis</kbd> in-game for a list of all emojis.</li>
+                  <ul>
+                    <li>Send by typing <kbd>:emoji_name:</kbd> in game chat.</li>
+                  </ul>
+                  <li>
+                    <b class="new">!!</b> <b>NEW: Added Chess</b> &mdash;
+                    <kbd>!chess</kbd>
+                  </li>
+                  <li>
+                    Can now hug a specific player by running
+                    <kbd>!hug "username"</kbd>
+                  </li>
+                  <li>Improved Homecoming Crown & Sash models.</li>
+                  <li>Added Baja Blast (craftable).</li>
+                  <br />
+                  <li><kbd>!list</kbd> in-game for a list of all commands.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="box-content">
-            <h3>Football Field: <code>!football</code></h3>
-            <ul>
-              <li>Added Red Light, Green Light</li>
-              <li>Added ClownPantss dunk tank</li>
-              <li>Updated end zones to say "Mascoutah"</li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="prom24">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#prom24-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Prom 2024</h3>
+                  <p class="text-body-50"><time>April 27, 2024</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="prom24-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2024_prom.png" alt="" />
+                <h3>General:</h3>
+                <ul>
+                  <li>
+                    <b class="new">!!</b> <b>NEW: Fishing</b> &mdash;
+                    <kbd>!fish</kbd>
+                  </li>
+                  <ul>
+                    <li>Talk to the Fisherman to receive a fishing rod and learn more.</li>
+                  </ul>
+                  <li>Added more commands &mdash; <kbd>!list</kbd> in-game for a list of all commands.</li>
+                  <ul>
+                    <li><kbd>!hug</kbd> &mdash; hug a random player.</li>
+                    <li><kbd>!kms</kbd> &mdash; self explanatory.</li>
+                  </ul>
+                  <li>Various Spleef QoL changes.</li>
+                  <li>New Ice Spice lore and remodel.</li>
+                  <li>Various custom models to improve gameplay.</li>
+                  <ul>
+                    <li>Arcade Machine (game selector), Exit, Spectate, Fisherman NPC, and more.</li>
+                  </ul>
+                  <li>Various new prizes and merchants &mdash; <kbd>!shop</kbd></li>
+                  <ul>
+                    <li>Claw Machines contains Cubepy, Dinkle, & MunMun. Collect all three to unlock Shroompy.</li>
+                  </ul>
+                  <li>Added craftable sword.</li>
+                  <li>Added lore (item descriptions) to various items.</li>
+                  <li>Garfield's neck no longer breaks.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="box-content">
-            <h3>Misc:</h3>
-            <ul>
-              <li>Updated Connect 4 lobby and added turns.</li>
-              <li>Added beer leaderboard.</li>
-              <li>Added two additional staff NPCs</li>
-              <br>
-              <li><code>!list</code> in-game for a list of all commands</li>
-            </ul>
+          <div class="container p-3 mt-3 bg-body rounded" id="hoco23">
+            <div class="row m-0">
+              <div class="col-12 col-lg-2 border-end border-0 border-md-2">
+                <div data-bs-toggle="collapse" href="#hoco23-collapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                  <h3 class="mb-0 fs-5">Homecoming 2023</h3>
+                  <p class="text-body-50"><time>April 27, 2023</time></p>
+                </div>
+              </div>
+              <div class="collapse show col-12 col-lg-10" id="hoco23-collapse">
+                <img class="img-fluid rounded mb-3" src="./assets/images/2023_hoco.png" alt="" />
+                <h3>General:</h3>
+                <ul>
+                  <li><b class="new">!!</b> <b>NEW: Commands</b> &mdash; <kbd>!list</kbd> in-game for a list of all commands.</li>
+                  <ul>
+                    <li>Various teleport commands.</li>
+                    <li><kbd>!spawn</kbd> &mdash; teleport self to Spawn.</li>
+                    <li><kbd>!spleef</kbd> &mdash; teleport self to Spleef.</li>
+                    <li><kbd>!ttt</kbd> &mdash; teleport self to Tic-Tac-Toe.</li>
+                    <li><kbd>!connect4</kbd> &mdash; teleport self to Connect 4.</li>
+                  </ul>
+                  <li>Added various cosmetics</li>
+                  <ul>
+                    <li>College Shirts &mdash; buy outside library.</li>
+                    <li>Various Items &mdash; buy at football field.</li>
+                  </ul>
+                  <li>Added interiors to <i>most</i> houses.</li>
+                  <li>Added Halloween decorations.</li>
+                  <li>Added various Easter eggs.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <img src="images/spleef.png" alt="New spleef arena" />
-        </div>
-        <div class="box" id="prom25">
-          <h2>Minecraft Prom 2025</h2>
-          <h4><time>April 26, 2025</time></h4>
-          <div class="box-content">
-            <h3>Casino: <code>!casino</code></h3>
-            <ul>
-              <li>
-                <b class="new">!!</b> <b>NEW: Loot Boxes</b>: Spend 2 diamonds
-                to get a fun, random item.
-              </li>
-              <li>
-                <b class="new">!!</b> <b>NEW: Slot Machine</b>: Bet an amount of
-                diamonds (1, 5, or 10) for a chance to make a profit!
-              </li>
-              <li>
-                Added more plushies, pride flags, & other collectables &mdash;
-                available via loot boxes.
-              </li>
-              <li>Added Beer.</li>
-            </ul>
-          </div>
-          <div class="box-content">
-            <h3>Games:</h3>
-            <ul>
-              <li>
-                <b>Connect 4:</b> Added outlines to Connect 4 blocks for easier
-                legibility.
-              </li>
-              <li>
-                <b>Dodgeball:</b> Replaced bow & arrow with a custom ball.
-              </li>
-              <ul>
-                <li>
-                  No need to charge up the dodgeball like you would a bow
-                  &mdash; simply aim and right click to throw!
-                </li>
-              </ul>
-            </ul>
-          </div>
-          <div class="box-content">
-            <h3>General:</h3>
-            <ul>
-              <li>Added chairs.</li>
-              <li>
-                Players now receive an on-screen message upon joining the world.
-              </li>
-              <li>
-                Court Jesters will now receive Clown Pants alongside the Court
-                Jester Hat.
-              </li>
-              <li>Added more emojis (including rock, paper, & scissors).</li>
-              <ul>
-                <li><code>!emojis</code> in-game for a list of all emojis.</li>
-              </ul>
-              <li><code>!list</code> in-game for a list of all commands.</li>
-            </ul>
-          </div>
-          <img src="images/casino.png" alt="casino" />
-        </div>
-        <div class="box" id="hoco24">
-          <h2>Minecraft Homecoming 2024</h2>
-          <h4><time>October 26, 2024</time></h4>
-          <div class="box-content">
-            <h3>General:</h3>
-            <ul>
-              <li>
-                <b class="new">!!</b> <b>NEW: Chat Emojis</b> &mdash;
-                <code>!emojis</code> in-game for a list of all emojis.
-              </li>
-              <ul>
-                <li>Send by typing <code>:emoji_name:</code> in game chat.</li>
-              </ul>
-              <li>
-                <b class="new">!!</b> <b>NEW: Added Chess</b> &mdash;
-                <code>!chess</code>
-              </li>
-              <li>
-                Can now hug a specific player by running
-                <code>!hug "username"</code>
-              </li>
-              <li>Improved Homecoming Crown & Sash models.</li>
-              <li>Added Baja Blast (craftable).</li>
-              <br>
-              <li><code>!list</code> in-game for a list of all commands.</li>
-            </ul>
-          </div>
-          <img src="images/chess.png" alt="chess" />
-        </div>
-        <div class="box" id="prom24">
-          <h2>Minecraft Prom 2024</h2>
-          <h4><time>April 27, 2024</time></h4>
-          <div class="box-content">
-            <h3>General:</h3>
-            <ul>
-              <li>
-                <b class="new">!!</b> <b>NEW: Fishing</b> &mdash;
-                <code>!fish</code>
-              </li>
-              <ul>
-                <li>
-                  Talk to the Fisherman to receive a fishing rod and learn more.
-                </li>
-              </ul>
-              <li>
-                Added more commands &mdash; <code>!list</code> in-game for a
-                list of all commands.
-              </li>
-              <ul>
-                <li><code>!hug</code> &mdash; hug a random player.</li>
-                <li><code>!kms</code> &mdash; self explanatory.</li>
-              </ul>
-              <li>Various Spleef QoL changes.</li>
-              <li>New Ice Spice lore and remodel.</li>
-              <li>Various custom models to improve gameplay.</li>
-              <ul>
-                <li>
-                  Arcade Machine (game selector), Exit, Spectate, Fisherman NPC,
-                  and more.
-                </li>
-              </ul>
-              <li>
-                Various new prizes and merchants &mdash; <code>!shop</code>
-              </li>
-              <ul>
-                <li>
-                  Claw Machines contains Cubepy, Dinkle, & MunMun. Collect all
-                  three to unlock Shroompy.
-                </li>
-              </ul>
-              <li>Added craftable sword.</li>
-              <li>Added lore (item descriptions) to various items.</li>
-              <li>Garfield's neck no longer breaks.</li>
-            </ul>
-          </div>
-          <img src="images/lake.jpeg" alt="fishing lake" />
-        </div>
-        <div class="box" id="hoco23">
-          <h2>Minecraft Homecoming 2023</h2>
-          <h4><time>October 28, 2023</time></h4>
-          <div class="box-content">
-            <h3>General:</h3>
-            <ul>
-              <li>
-                <b class="new">!!</b> <b>NEW: Commands</b> &mdash;
-                <code>!list</code> in-game for a list of all commands.
-              </li>
-              <ul>
-                <li>Various teleport commands.</li>
-                <li><code>!spawn</code> &mdash; teleport self to Spawn.</li>
-                <li><code>!spleef</code> &mdash; teleport self to Spleef.</li>
-                <li><code>!ttt</code> &mdash; teleport self to Tic-Tac-Toe.</li>
-                <li>
-                  <code>!connect4</code> &mdash; teleport self to Connect 4.
-                </li>
-              </ul>
-              <li>Added various cosmetics</li>
-              <ul>
-                <li>College Shirts &mdash; buy outside library.</li>
-                <li>Various Items &mdash; buy at football field.</li>
-              </ul>
-              <li>Added interiors to <i>most</i> houses.</li>
-              <li>Added Halloween decorations.</li>
-              <li>Added various Easter eggs.</li>
-            </ul>
-          </div>
-          <img src="images/halloween.png" alt="halloween" />
         </div>
       </main>
     </div>
+    <footer class="bg-dark text-center text-white pt-3 pb-4">
+      <div class="justify-content-center form-switch ms-auto">
+        <input class="form-check-input hidden" type="checkbox" id="darkModeToggle" />
+        <label class="form-check-label" for="darkModeToggle">
+          <span class="material-symbols-outlined"> dark_mode </span>
+          <!-- <span class="material-symbols-outlined"> light_mode </span> -->
+        </label>
+      </div>
+    </footer>
     <script type="module" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("darkModeToggle");
+        const html = document.documentElement;
+
+        // Sync the checkbox switch state with the current active theme
+        const activeTheme = html.getAttribute("data-bs-theme");
+        toggle.checked = activeTheme === "dark";
+
+        // Listen for toggle switch changes
+        toggle.addEventListener("change", function () {
+          if (this.checked) {
+            html.setAttribute("data-bs-theme", "dark");
+            localStorage.setItem("theme", "dark");
+          } else {
+            html.setAttribute("data-bs-theme", "light");
+            localStorage.setItem("theme", "light");
+          }
+        });
+      });
+    </script>
   </body>
+
 </html>

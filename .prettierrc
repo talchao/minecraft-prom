@@ -1,1 +1,15 @@
-{}
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleAttributePerLine": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "printWidth": 200,
+        "htmlWhitespaceSensitivity": "css"
+      }
+    }
+  ]
+}
