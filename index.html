@@ -68,7 +68,7 @@
 
       <div class="p-3 bg-primary">
         <div class="m-3">
-          <h3 class="m-lg-4 text-white">LATEST</h3>
+          <h3 class="m-lg-4">LATEST</h3>
           <div class="row justify-content-center">
             <div class="card col-lg-4 p-2 rounded-3 border-2 border-primary">
               <img class="rounded card-img-uniform" src="./assets/images/2026_hoco.png" />
@@ -146,11 +146,26 @@
           return
         }
 
-        document.getElementById("month").innerHTML = Math.floor(timeSpan / month)
-        document.getElementById("day").innerHTML = Math.floor((timeSpan % month) / day)
-        document.getElementById("hour").innerHTML = Math.floor((timeSpan % day) / hour)
-        document.getElementById("minute").innerHTML = Math.floor((timeSpan % hour) / minute)
-        document.getElementById("second").innerHTML = Math.floor((timeSpan % minute) / second)
+        let monthDisplay = Math.floor(timeSpan / month)
+        if (monthDisplay / 10 < 1) monthDisplay = "0" + monthDisplay
+
+        let dayDisplay = Math.floor((timeSpan % month) / day)
+        if (dayDisplay / 10 < 1) dayDisplay = "0" + dayDisplay
+
+        let hourDisplay = Math.floor((timeSpan % day) / hour)
+        if (hourDisplay / 10 < 1) hourDisplay = "0" + hourDisplay
+
+        let minuteDisplay = Math.floor((timeSpan % hour) / minute)
+        if (minuteDisplay / 10 < 1) minuteDisplay = "0" + minuteDisplay
+
+        let secondDisplay = Math.floor((timeSpan % minute) / second)
+        if (secondDisplay / 10 < 1) secondDisplay = "0" + secondDisplay
+
+        document.getElementById("month").innerHTML = monthDisplay
+        document.getElementById("day").innerHTML = dayDisplay
+        document.getElementById("hour").innerHTML = hourDisplay
+        document.getElementById("minute").innerHTML = minuteDisplay
+        document.getElementById("second").innerHTML = secondDisplay
       }
 
       countdown()
