@@ -140,6 +140,12 @@
         const now = new Date()
         const timeSpan = eventDay - now
 
+        if (now.getDate() > eventDay.getDate()) {
+          clearInterval(interval)
+          document.getElementById("timer").innerHTML = "<h2>Stay tuned for next event</h2>"
+          return
+        }
+
         if (timeSpan < 0) {
           clearInterval(interval)
           document.getElementById("timer").innerHTML = "<h2>Homecoming has started!</h2>"
